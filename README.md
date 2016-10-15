@@ -1,4 +1,4 @@
-# Ejercicios-basicos-Python
+# Ejercicios basicos Python
 Ejercicios básicos para interactuar y probar Python
 
 1.  Función que retorne el mayor de dos números o 0 si son iguales
