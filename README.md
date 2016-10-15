@@ -19,8 +19,8 @@ Ejercicios básicos para interactuar y probar Python:
 
 9.  Programe un módulo en Python que reutilizando la función anterior muestre nuestros datos en pantalla con formato banner tal y como se representa abajo:
   (Linea de asteriscos)
-  Autor: Lucas Sánchez 
-  Email: lucassanchez@campusciff.net 
+  Autor: Lucas Sánchez;
+  Email: ejemplo@campusciff.net 
   (Lista de asteriscos)
 
 10. Programa modularizado que, utilizando funciones, calcule el perímetro y el área de un círculo cuyo radio es proporcionado por el usuario 
