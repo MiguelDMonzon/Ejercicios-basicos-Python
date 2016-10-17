@@ -54,7 +54,7 @@ def calcular_impuesto():
     :return: float
     """
     ingresos_anuales = input("Inserte sus ingresos anuales (en euros): ")
-    tiene_hijos = input("Tiene Ud. hijo/as? (S/N): ")
+    tiene_hijos = raw_input("Tiene Ud. hijo/as? (S/N): ")
     if tiene_hijos == "S":
         num_hijos = input("Escriba cuantos hijo/as tiene: ")
         ingreso_imponible = ingresos_anuales - 600 - (60 * num_hijos)
@@ -131,7 +131,7 @@ def calcular_perimetro(radio):
     :param radio: float
     :return: float
     """
-    return 2 * pi * radio
+    return 2.0 * pi * radio
 
 
 def calcular_area(radio):
@@ -140,7 +140,7 @@ def calcular_area(radio):
     :param radio: float
     :return: float
     """
-    return pi * (radio ** 2)
+    return pi * (radio ** 2.0)
 
 
 def programa_calculo():
@@ -189,7 +189,7 @@ def es_vocal(letra):
     :param letra: char
     :return: bool
     """
-    return letra in ['a', 'e', 'i', 'o', 'u']
+    return letra.upper() in ['A', 'E', 'I', 'O', 'U']
 
 
 # Programar una funcion en Python que a partir de un numero entero entre 1 y 7 que recibe como
@@ -235,6 +235,50 @@ def dia_semana_switch(num):
         7: "Domingo",
     }
     return switcher.get(num, "Error, el numero tiene que estar entre 1 y 7.")
+
+
+# Funcion que recibe un numero y que muestre la tabla de multiplicar de ese numero (hasta 10)
+def tabla_multiplicar(num):
+    """
+    Pinta la tabla de multiplicar de un numero
+    :param num: float
+    :return: void
+    """
+    for i in range(0, 11):
+        print (str(num) + " * " + str(i) + " = " + str(num*i))
+
+
+# Funcion que suma todos los elementos del 1 al 200 que sean multiplos de 3 o de 5
+def suma_multiplos():
+    """
+    Calcula la suma de los multiplos de 3 o 5 entre el 1 y el 200 y lo pinta en pantalla
+    :return: void
+    """
+    suma = 0
+    for i in range(1, 201):
+        if i % 3 == 0 or i % 5 == 0:
+            suma += i
+
+    print ("La suma de los multiplos de 3 o de 5 es: " + str(suma))
+
+
+# Funcion que devuelve la suma de los primeros 50 numeros que cumplen la condicion de ser
+# multiplo de 3 o de 5
+def suma_multiplos2():
+    """
+    Calcula la suma de los 50 primeros multiplos de 3 o de 5 y lo pinta en pantalla
+    :return: void
+    """
+    num = 1
+    suma = 0
+    contador = 0
+    while contador < 50:
+        if num % 3 == 0 or num % 5 == 0:
+            suma += num
+            contador += 1
+        num += 1
+    print ("La suma de los 50 primeros multiplos de 3 o 5 es: " + str(suma))
+
 
 
 

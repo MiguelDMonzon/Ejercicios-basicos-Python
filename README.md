@@ -32,3 +32,10 @@ Ejercicios básicos para interactuar y probar Python:
 13. Programar una función que determine si una letra es vocal o no.
 
 14. Programar una función en Python que a partir de un número entero entre 1 y 7 que recibe como argumento retorne el día de la semana que corresponda, y un mensaje de error si el número no está entre 1 y 7.
+
+15. Escribir una función que reciba un número y que muestre su tabla de multiplicar (hasta 10).
+
+16. Programar una función que sume todos los elementos, entre el 1 y el 200, que sean múltiplos de 3 o de 5.
+
+17. Programar una función que sume los 50 primeros elementos que sean múltiplos de 3 o de 5.
+
