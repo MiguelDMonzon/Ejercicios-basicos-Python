@@ -3,10 +3,11 @@ from math import pi
 
 
 # Funcion que retorne el mayor de dos numeros o 0 si son iguales
-def max_numeros():
-    num1 = input("Inserte el primer numero: ")
-    num2 = input("Inserte el segundo numero: ")
-
+def max_numeros(num1, num2):
+    """ float, float -> float
+        OBJ: Retorna el mayor de dos números x e y
+    """
+    
     if num1 > num2:
         return num1
     elif num2 > num1:
