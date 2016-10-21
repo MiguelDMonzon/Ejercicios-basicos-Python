@@ -162,6 +162,64 @@ def es_cadenas_iguales(cad1, cad2):
 
 # Distribuir 20 datos enteros leidos por teclado en dos listas de tal manera que se vayan generando
 # dos secuencias ordenadas, una creciente y otra decreciente
+def insertar_descendente(num, lista):
+    """
+    Inserta un numero en una lista, de manera descendente
+    :param num: int
+    :param lista: list[int]
+    :return: list[int]
+    """
+    lista_salida = []
+    # Si la lista a esta vacia o el menor de la lista es mayor o igual que el numero a insertar
+    if len(lista) == 0:
+        lista_salida.append(num)
+    elif min(lista) >= num:
+        lista_salida = lista + [num]
+    # Si tiene mas elementos
+    else:
+        lista_salida = []
+        numero_insertado = False
+        for i in range(0, len(lista)):
+            # Si el numero es mas grande que el elemento y no ha sido colocado, colocarlo delante
+            if num >= lista[i] and numero_insertado is False:
+                lista_salida.append(num)
+                lista_salida.append(lista[i])
+                numero_insertado = True
+            # Si no, pasa al siguiente elemento
+            else:
+                lista_salida.append(lista[i])
+    return lista_salida
+
+
+def insertar_ascendente(num, lista):
+    """
+    Inserta un numero en una lista, de manera ascendente
+    :param num: int
+    :param lista: list[int]
+    :return: list[int]
+    """
+    lista_salida = []
+    # Si la lista a esta vacia o el menor de la lista es mayor o igual que el numero a insertar
+    if len(lista) == 0:
+        lista_salida.append(num)
+    elif max(lista) <= num:
+        lista_salida = lista + [num]
+    # Si tiene mas elementos
+    else:
+        lista_salida = []
+        numero_insertado = False
+        for i in range(0, len(lista)):
+            # Si el numero es mas pequeno que el elemento y no ha sido colocado, colocarlo delante
+            if num <= lista[i] and numero_insertado is False:
+                lista_salida.append(num)
+                lista_salida.append(lista[i])
+                numero_insertado = True
+            # Si no, pasa al siguiente elemento
+            else:
+                lista_salida.append(lista[i])
+    return lista_salida
+
+
 def generar_secuencias_ordenadas():
     """
     Devuelve dos listas, la primera ordenada ascendente y la segunda descendente, en funcion de los
@@ -172,10 +230,9 @@ def generar_secuencias_ordenadas():
     lista_desc = []
     for i in range(0, 20):
         num = input("Inserte un entero: ")
-        lista_asc.append(num)
-        lista_asc.sort(reverse=False)
-        lista_desc.append(num)
-        lista_desc.sort(reverse=True)
+        lista_asc = insertar_ascendente(num, lista_asc)
+        lista_desc = insertar_descendente(num, lista_desc)
+
     print("La lista ascendente es: " + str(lista_asc))
     print("La lista descendente es: " + str(lista_desc))
 
